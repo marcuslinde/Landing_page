@@ -1,92 +1,94 @@
-# DorteLinde.dk (Live) Landing Page
+# DorteLinde.dk 🚀
+### Professional Landing Page for an Inclusion Specialist
 
-Dette repository indeholder koden til en "single-page" landing page, bygget til en specialist i inklusion af børn med særlige behov.
+![Status](https://img.shields.io/badge/Status-Dev_Complete_|_Awaiting_Launch-yellow) ![Stack](https://img.shields.io/badge/Stack-React_|_TypeScript_|_Tailwind-blue) ![DevOps](https://img.shields.io/badge/DevOps-Docker_Review_Pipeline-2496ED)
 
-Projektets formål var at bygge en moderne og responsiv hjemmeside fra bunden, baseret på et designudkast fra Figma, og håndtere hele processen fra udvikling til en fungerende "live" side.
-**Personligt Mål:** Jeg valgte bevidst et **Vite + React + TypeScript** setup for at få mere eksponering til React. Derudover opsatte jeg også en review "pipeline" i **Docker** for at få mere erfaring. Jeg fokuserede på *implementering og refaktorering* af et Figma-design, ikke design fra bunden.
+**DorteLinde.dk** is a responsive, single-page landing page built for a consultant specializing in the inclusion of children with special needs.
 
-<br>
+This project represents the full lifecycle of a web product: from interpreting a **Figma design**, through **React/TypeScript implementation**, to a custom **Docker-based review workflow**.
 
-> **Status:** Bygget og lanceret.
-> **Kunde:** Dorte Linde (min mor)
+> **Client:** Dorte Linde (Consultant)
+> **Role:** Full Stack Development & DevOps
+> **Current Status:** Development complete. Staged and ready for production launch (pending client schedule).
 
-<br>
+---
 
-## Fra Udkast til Live Site
+## 🎨 From Concept to Code
 
-Processen involverede en signifikant refaktorering og justering af det oprindelige Figma-udkast for at forbedre brugerflow, rette designfejl og implementere autentisk indhold.
+The core challenge was not just building the site, but refactoring a rough Figma draft into a cohesive, user-friendly experience.
 
-### 1\. Oprindeligt Figma-udkast
+### 1. Original Figma Draft
+*The initial auto-generated layout served as the visual direction but lacked logical flow.*
+<img width="100%" alt="Figma Draft" src="https://github.com/user-attachments/assets/e532ae0d-b78a-48a5-8ebf-6f7967aa321d" />
 
-*Dette var det autogenererede udgangspunkt, som primært fungerede som en design-retning.*
-<img width="2783" height="1602" alt="Figma Udkast" src="https://github.com/user-attachments/assets/e532ae0d-b78a-48a5-8ebf-6f7967aa321d" />
+### 2. Implementation (React)
+*The final version features improved section logic, responsive behavior, and optimized assets.*
+<img width="100%" alt="Final Version 1" src="https://github.com/user-attachments/assets/99e822e0-fdb3-4b67-ad60-e419b0eb5e07" />
+<img width="100%" alt="Final Version 2" src="https://github.com/user-attachments/assets/ab3b4586-5956-45a0-98f4-caebf9ee8d90" />
 
-### 2\. Min Endelige, Implementerede Version
+---
 
-*Den færdige side, bygget i React, med justeret layout, nyt indhold og forbedret sektions-flow.*
-<img width="2782" height="1602" alt="Endelig version 1" src="https://github.com/user-attachments/assets/99e822e0-fdb3-4b67-ad60-e419b0eb5e07" />
-<img width="2782" height="1602" alt="Endelig version 2" src="https://github.com/user-attachments/assets/ab3b4586-5956-45a0-98f4-caebf9ee8d90" />
+## 🎯 Learning Goals & Motivation
 
-<br>
+I deliberately chose a modern tech stack to bridge the gap between design and engineering. My key objectives were:
 
-## 🎯 Formål & Læringsmål
+1.  **Modern Frontend Workflow:** Gaining hands-on experience with **Vite, React, and TypeScript** to build a strictly typed, performant application.
+2.  **Refactoring as a Skill:** Instead of designing from scratch, I practiced the critical skill of *interpreting* a design, identifying UX flaws (e.g., separating "Topics" from "Pricing"), and refactoring the code (refining `Navbar.tsx` and `Hero.tsx`) for maintainability.
+3.  **DevOps for Clients:** Solving a real-world communication problem using **Docker** (see below).
 
-Jeg valgte bevidst dette projekt for at styrke mine praktiske kompetencer inden for et moderne frontend-setup. Mine primære læringsmål var:
+---
 
-1.  **Frontend Workflow:** At få hands-on erfaring med **Vite, React og TypeScript** til at bygge en komplet, type-sikker applikation.
-2.  **Kode-refaktorering:** Projektets fokus var *implementering* og *refaktorering*. Jeg har arbejdet ud fra et Figma-udkast, som jeg efterfølgende har justeret, simplificeret og refaktoreret (især i `Navbar.tsx` og `Hero.tsx`) for at forbedre læsbarhed og vedligeholdelse.
-3.  **DevOps (Docker):** At opsætte en praktisk, **Docker-baseret review-pipeline** for at løse et reelt problem for en ikke-teknisk kunde.
+## 🐳 The Docker Review Pipeline
 
-<br>
+One of the unique challenges was enabling my non-technical client to review "work-in-progress" changes without hosting them on a public server or asking her to install Node.js.
 
-## 🧑‍💻 Tech Stack
+**The Solution:**
+I containerized the Vite development environment to create a portable review pipeline.
 
-  * **Frontend:** React (med Vite)
-  * **Sprog:** TypeScript
-  * **Styling:** Tailwind CSS
-  * **UI Komponenter:** shadcn/ui
-  * **Formular-håndtering:** Formspree (Serverless "form-til-email")
-  * **Review-miljø:** Docker / Docker Hub (Containeriseret Vite Dev Server)
-  * **Hosting (Prod):** Nordicway (cPanel/Apache)
+1.  **Dockerfile:** Created a lightweight image based on `node:18-alpine` that exposes port `5523`.
+2.  **Distribution:** Pushed the image to Docker Hub (`marcuslinde/dortelinde-demo`).
+3.  **Client Review:** The client could run a single command:
+    ```bash
+    docker run -p 5523:5523 marcuslinde/dortelinde-demo
+    ```
+**Result:** This allowed the client to view the site at `http://localhost:5523` immediately, drastically shortening the feedback loop.
 
-<br>
+---
 
-## 🧭 Min Proces & Højdepunkter
+## 🛠 Tech Stack
 
-Min rolle i projektet dækkede hele processen:
+* **Framework:** React 18 (via Vite)
+* **Language:** TypeScript
+* **Styling:** Tailwind CSS
+* **UI Library:** shadcn/ui
+* **Forms:** Formspree (Serverless form handling)
+* **DevOps:** Docker (Review Pipeline)
+* **Hosting:** Apache/cPanel (Nordicway) - *Configuration Ready*
 
-### 1\. Design, Indhold & Refaktorering
+---
 
-I tæt dialog med kunden har jeg justeret og forbedret det oprindelige udkast markant:
+## 🧩 Technical Highlights & Problem Solving
 
-  * **Sektions-flow:** Ændret rækkefølgen og logikken (f.eks. adskilt "Emner" fra "Priser") for at skabe et mere logisk brugerflow.
-  * **Asset-håndtering:** Implementeret en `public`-mappe til billeder, som komponenterne selv refererer til, frem for hardcodede URL's.
-  * **Design-fejlfinding:** Identificeret og rettet adskillige design- og layout-fejl (f.eks. elementer, der "wrappede" akavet på tablets).
-  * **Tekst & Tone:** Omskrevet alt "autogenereret" tekst til autentisk indhold, der matcher kundens stemme.
+During development, I encountered and resolved several specific technical hurdles:
 
-### 2\. Docker Review-Pipeline
+* **Tailwind Opacity Bug:** Discovered an issue where opacity modifiers (e.g., `bg-primary/15`) failed because the underlying CSS variables were defined as HEX codes.
+    * *Fix:* Utilized Tailwind arbitrary values (`bg-[#117A8B]/15`) as a pragmatic solution to maintain velocity without rewriting the global theme configuration.
+* **TypeScript Build Pipeline:** Debugged strict type errors regarding unused variables and missing component definitions in the `shadcn` library to ensure a clean `npm run build` process.
+* **Asset Management:** Replaced hardcoded design URLs with a structured local `public` asset directory for better caching and reliability.
 
-For at give min ikke-tekniske kunde en nem måde at se og godkende siden på, valgte jeg at **containerisere selve Vite-udviklingsmiljøet**.
+---
 
-> **Min Løsning:**
->
-> 1.  Skrev et `Dockerfile` (baseret på `node:18-alpine`) der installerer dependencies og kører `npm run dev` på en fast port (`5523`).
-> 2.  Pushede dette dev-image til Docker Hub (`marcuslinde/dortelinde-demo`).
-> 3.  Gav min kunde én simpel `docker run -p 5523:5523 ...`-kommando.
->
-> **Resultat:** Hun kunne se siden live på `http://localhost:5523` og se mine ændringer, hver gang jeg pushede et nyt image, *uden* at hun selv skulle installere Node, NPM eller køre `npm install`.
+## 🚀 How to Run Locally
 
-### 3\. Teknisk Fejlfinding
-
-Jeg stødte på og løste flere konkrete bugs:
-
-  * **Tailwind Opacity Bug:** Fandt og fiksede en fejl, hvor opacity-klasser (`bg-primary/15`) var usynlige. Fejlen skyldtes, at CSS-variablerne var defineret som HEX. Løste det ved at bruge "arbitrary values" (f.eks. `bg-[#117A8B]/15`) som en bevidst afvejning (tid vs. output).
-  * **Build-fejl:** Debuggede og løste en række TypeScript-fejl (ubrugte `index`-variable og manglende `outline`-varianter i `shadcn/ui`), hvilket resulterede i et succesfuldt `npm run build`.
-
-### 4\. Deployment til Shared Hosting
-
-Jeg håndterede det fulde deployment til et traditionelt cPanel-miljø (Nordicway):
-
-  * Købte domæne og opsatte alt praktisk.
-  * Byggede projektet til statiske filer (`npm run build`).
-  * Overførte filerne og konfigurerede serveren til at pege på den korrekte `index.html`.
+1.  **Clone the repository**
+    ```bash
+    git clone [https://github.com/marcuslinde/dortelinde.git](https://github.com/marcuslinde/dortelinde.git)
+    ```
+2.  **Install Dependencies**
+    ```bash
+    npm install
+    ```
+3.  **Run Development Server**
+    ```bash
+    npm run dev
+    ```
