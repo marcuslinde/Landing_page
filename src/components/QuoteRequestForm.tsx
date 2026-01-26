@@ -11,10 +11,9 @@ export function QuoteRequestForm() {
     name: "",
     email: "",
     organization: "",
-    packageType: "", // Renamed from eventType
+    packageType: "",
     eventDate: "",
     attendees: "",
-    topic: "",
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -23,7 +22,6 @@ export function QuoteRequestForm() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Send data til din Formspree URL
     try {
       const response = await fetch("https://formspree.io/f/xblpnzer", { 
         method: 'POST',
@@ -36,7 +34,6 @@ export function QuoteRequestForm() {
 
       if (response.ok) {
         toast.success("Tak for din henvendelse! Jeg vender tilbage hurtigst muligt.");
-        // Reset form
         setFormData({
           name: "",
           email: "",
@@ -44,7 +41,6 @@ export function QuoteRequestForm() {
           packageType: "",
           eventDate: "",
           attendees: "",
-          topic: "",
           message: ""
         });
       } else {
@@ -67,14 +63,14 @@ export function QuoteRequestForm() {
           <h2 className="text-4xl font-heading font-bold tracking-tight mb-2">Anmod om Tilbud</h2>
           {/* RETTET: Varmere subheader */}
           <p className="text-muted-foreground mt-4">
-            Jeg glæder mig til at høre fra jer! Udfyld formularen, så vender jeg tilbage hurtigst muligt for at drøfte jeres behov.
+            Udfyld formularen, så vender jeg tilbage hurtigst muligt for at drøfte jeres behov.
           </p>
         </div>
         
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-2">
-              <Label htmlFor="name">Fulde Navn *</Label>
+              <Label htmlFor="name">Fulde navn *</Label>
               <Input
                 id="name"
                 required
@@ -85,7 +81,7 @@ export function QuoteRequestForm() {
             </div>
             
             <div className="space-y-2">
-              <Label htmlFor="email">Email Adresse *</Label>
+              <Label htmlFor="email">E-mail *</Label>
               <Input
                 id="email"
                 type="email"
@@ -98,18 +94,17 @@ export function QuoteRequestForm() {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="organization">Kirke eller Organisation *</Label>
+            <Label htmlFor="organization">Kirke, forening eller skole *</Label>
             <Input
               id="organization"
               required
               value={formData.organization}
               onChange={(e) => setFormData(prev => ({ ...prev, organization: e.target.value }))}
-              placeholder="Kirkenavn"
+              placeholder="Navn"
             />
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {/* --- RETTET: Opdateret til at matche 'Pricing'-sektionen --- */}
             <div className="space-y-2">
               <Label htmlFor="packageType">Hvilken pakke er I interesseret i? *</Label>
               <Select value={formData.packageType} onValueChange={(value) => setFormData(prev => ({ ...prev, packageType: value }))} required>
@@ -128,7 +123,7 @@ export function QuoteRequestForm() {
             </div>
             
             <div className="space-y-2">
-              <Label htmlFor="eventDate">Foretrukken Event Dato</Label>
+              <Label htmlFor="eventDate">Ønsket dato</Label>
               <Input
                 id="eventDate"
                 type="date"
@@ -138,49 +133,32 @@ export function QuoteRequestForm() {
             </div>
           </div>
 
-          {/* --- RETTET: Opdateret 'Input' til 'Select' for at matche 'Topics'-sektionen --- */}
           <div className="space-y-2">
-            <Label htmlFor="topic">Hvilket emne er I mest interesseret i?</Label>
-            <Select value={formData.topic} onValueChange={(value) => setFormData(prev => ({ ...prev, topic: value }))}>
-              <SelectTrigger id="topic">
-                <SelectValue placeholder="Vælg et emne..." />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="neurodiversitet">Neurodiversitet i Fællesskabet</SelectItem>
-                <SelectItem value="strategier">Praktiske Inklusionsstrategier</SelectItem>
-                <SelectItem value="kultur">Opbygning af en Inkluderende Kultur</SelectItem>
-                <SelectItem value="andet">Andet (beskrives i besked)</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-
-          <div className="space-y-2">
-            <Label htmlFor="attendees">Forventet Antal Deltagere</Label>
+            <Label htmlFor="attendees">Forventet antal deltagere</Label>
             <Input
               id="attendees"
               type="number"
               value={formData.attendees}
               onChange={(e) => setFormData(prev => ({ ...prev, attendees: e.target.value }))}
-              placeholder="f.eks. 30" // Rettet
+              placeholder="F.eks. 30"
             />
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="message">Yderligere Detaljer *</Label>
+            <Label htmlFor="message">Yderligere bemærkninger *</Label>
             <Textarea
               id="message"
               required
               value={formData.message}
               onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
-              // RETTET: Varmere placeholder
               placeholder="Fortæl mig lidt om jeres fællesskab, jeres udfordringer, og hvad I håber at få ud af et oplæg eller forløb."
-              rows={5} // Justeret
+              rows={5}
             />
           </div>
 
           <div className="pt-4">
             <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
-              {isSubmitting ? "Indsender..." : "Indsend Anmodning"}
+              {isSubmitting ? "Indsender..." : "Indsend anmodning"}
             </Button>
           </div>
         </form>

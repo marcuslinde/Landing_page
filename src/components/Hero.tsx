@@ -31,7 +31,7 @@ export function Hero() {
                 Dorte Linde
               </h1>
               <p className="text-xl md:text-2xl lg:text-muted-foreground font-heading font-medium" style={{ color: 'var(--hero-text)' }}>
-                Hjælper kristne fællesskaber med at skabe inkluderende rum, hvor neurodivergente børn kan blomstre
+                Hjælper kirker, foreninger og skoler med at skabe en kultur, hvor børn med særlige behov kan blomstre.
               </p>
             </div>
             
@@ -42,7 +42,7 @@ export function Hero() {
                 size="lg"
                 className="px-10 py-6 hover:scale-105 transition-all duration-300"
               >
-                Anmod om Tilbud
+                Anmod om tilbud
               </Button>
               <Button 
                 variant="secondary"
@@ -50,14 +50,14 @@ export function Hero() {
                 className="px-10 py-6 hover:scale-105 transition-all duration-300"
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Lær Mere
+                Lær mere
               </Button>
             </div>
 
             {/* Trust indicators */}
             {/* --- RETTELSE: Tilføjet 'items-center' --- */}
             <div className="flex flex-col lg:flex-row lg:justify-between items-center gap-6 pt-8 text-sm">
-            {['25 års erfaring', 'Træner kirker landet over', 'Anerkendt forfatter'].map((text) => (
+            {['+25 års erfaring', 'Træner kirker landet over', 'Praktisk & konkret'].map((text) => (
                 <div key={text} className="flex items-center gap-2"> 
                     <span className="
                         flex 

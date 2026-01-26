@@ -22,14 +22,14 @@ export function Book() {
             <h2 className="text-4xl font-heading font-bold tracking-tight mb-2">Børn med særlige behov – i kirkeligt børnearbejde</h2>
             
             <p className="text-muted-foreground">
-              Bogen er skrevet direkte til dig, der leder efter hjælp til at inkludere børn med særlige behov. Som lærer med speciale i specialpædagogik har jeg kogt 25 års viden ned til en let tilgængelig guide, der giver dig både indsigt i børns forskelligheder og et katalog af praktiske tips.
+              Bogen er skrevet direkte til dig, der leder efter hjælp til at inkludere børn med særlige behov. Som lærer med speciale i specialpædagogik har jeg kogt 25 års viden ned til en let tilgængelig guide, der giver dig både indsigt i børns forskelligheder samt et katalog af praktiske tips.
             </p>
             
             <div className="space-y-3">
               {[
                 'En indsigt i børns forskelligheder (autisme, ADHD, angst mm.)',
                 'En praktisk tilgang til håndtering af svære situationer',
-                'Alle nødvendige værktøjer og konkrete tips, du kan bruge med det samme'
+                'Værktøjer og konkrete tips, du kan bruge med det samme'
               ].map((text) => (
                 <div key={text} className="flex items-start gap-3">
                   <BookOpen className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
@@ -54,10 +54,9 @@ export function Book() {
             </div>
             
             <div className="flex flex-wrap gap-4 pt-4">
-              {/* Knap 1: Er 'default' (guld) som i Hero. 'px-8' er bevaret. */}
               <Button size="lg" className="px-8" asChild>
                 <a 
-                  href="https://www.eksistensen.dk/born-med-saerlige-behov-i-kirkeligt-bornearbejde.html" 
+                  href=" https://prorex.dk/shop/1704-ledelses-litteratur/18753-boern-med-saerlige-behov---i-kirkeligt-boernearbejde/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
@@ -65,7 +64,6 @@ export function Book() {
                 </a>
               </Button>
               
-              {/* Knap 2: RETTET - 'variant="outline"' er ændret til 'variant="secondary"' */}
               <Button 
                 size="lg" 
                 variant="secondary"

@@ -26,7 +26,8 @@ const pricingTiers = [
       "Undervisning om børnetyper og reaktioner",
       "Kreativt værksted (lav egne fidgets)",
       "Fælles samtale og sparring om jeres hverdag",
-      "Deltagerne går hjem med egne redskaber"
+      "Deltagerne går hjem med egne redskaber",
+      "Huskekort (A5) til alle deltagere"
     ],
     popular: true
   },
@@ -36,10 +37,10 @@ const pricingTiers = [
     description: "Til jer, der har en specifik udfordring eller brug for langsigtet hjælp til en inkluderende kultur.",
     features: [
       "Alt fra 'Hands-on Workshop'-pakken",
-      "Udvidet 3.5-timers session (hel formiddag/aften)",
-      "1:1 sparring med ledere og nøglepersoner",
-      "Konkret implementeringsplan for jeres kirke",
-      "Opfølgnings-session (virtuel) efter 1 måned"
+      "Udvidet 3,5-timers session (hel formiddag/aften)",
+      "1:1 sparring med udvalgte ledere og nøglepersoner",
+      "Foreslag til implementeringsstrategier",
+      "Opfølgningssession (virtuel) efter en måned"
     ],
     popular: false
   }
@@ -61,7 +62,7 @@ export function Pricing() {
           <h2 className="text-4xl font-heading font-bold tracking-tight mb-2">Find jeres Format</h2>
           {/* --- INTRO-TEKST FRA OPRINDELIG TEKST --- */}
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Her er de tre pakker, jeg tilbyder. Alle ydelser tilpasses selvfølgelig til jeres målgruppe og behov, uanset om det er i kirken, klubben eller spejderarbejdet.
+            Her er de tre pakker, jeg tilbyder. Alle ydelser tilpasses selvfølgelig til jeres målgruppe og unikke behov. 
           </p>
         </div>
         
@@ -104,8 +105,7 @@ export function Pricing() {
         <div className="mt-12 text-center">
           {/* Del 1: Den almindelige disclaimer */}
           <p className="text-muted-foreground text-sm">
-            Alle priser er ekskl. transport (kørsel tillægges efter statens gældende takst).<br />
-            Kirker og NGO’er får nedsat pris.
+            Alle priser er ekskl. transport (kørsel tillægges efter statens gældende takst).
           </p>
           
           {/* Del 2: Den nye, synlige boks til variable ydelser */}
@@ -114,7 +114,7 @@ export function Pricing() {
                     Leder du efter noget andet?
                 </h3>
                 <p className="text-muted-foreground mt-2">
-                    Jeg tilbyder også 1:1 sparring til specifikke udfordringer og længerevarende partnerskaber for kirkenetværk (som f.eks. Apostolsk Kirke). Kontakt mig for et uforpligtende tilbud.
+                    Jeg tilbyder også 1:1 sparring til specifikke udfordringer og længerevarende partnerskaber for kirkenetværk. Kontakt mig for et uforpligtende tilbud.
                 </p>
             </div>
         </div>
