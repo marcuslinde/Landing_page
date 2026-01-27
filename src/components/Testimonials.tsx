@@ -1,63 +1,84 @@
-const LogoPlaceholder = ({ name }: { name: string }) => (
-  <div className="flex items-center justify-center h-12 text-center text-muted-foreground/80 text-sm font-medium">
-    {name}
-  </div>
+import { Quote } from "lucide-react";
+
+const mosaikSrc = "/images/logos/mosaik-logo.png";
+const danskoaseSrc = "/images/logos/DanskOase.png";
+const apostolskSrc = "/images/logos/apostolsk.png";
+
+const OrganizationLogo = ({ src, alt }: { src: string; alt: string }) => (
+	<div className="flex items-center justify-center w-32 h-12 px-6">
+		<img
+			src={src}
+			alt={alt}
+			className="h-full w-auto max-w-[120px] object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+		/>
+	</div>
+);
+
+const TestimonialCard = ({
+	quote,
+	author,
+	role,
+}: {
+	quote: string;
+	author: string;
+	role: string;
+}) => (
+	<div className="bg-white border border-border rounded-lg p-8 relative flex flex-col h-full overflow-hidden">
+		<Quote className="absolute -right-6 -top-6 w-24 h-24 text-[#117ABB]/10" />
+		<blockquote className="text-sm text-foreground mb-6 flex-1 relative z-10">
+			{quote}
+		</blockquote>
+		<div className="relative z-10">
+			<p className="text-sm font-semibold text-primary">— {author}</p>
+			<p className="text-xs text-muted-foreground">{role}</p>
+		</div>
+	</div>
 );
 
 export function Testimonials() {
-  return (
-    // Sektionen har stadig den korrekte 'bg-secondary'
-    <section id="testimonials" className="py-20 px-6 bg-secondary relative overflow-hidden">
-      
-      {/* Baggrunds-blob'en er uændret */}
-      <div className="absolute top-1/4 -left-20 w-96 h-96 bg-[#117ABB]/15 rounded-blob animate-float"></div>
-      
-      <div className="max-w-6xl mx-auto relative">
-        
-        {/* Headeren er uændret */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-heading font-bold tracking-tight mb-2">
-            Hvad andre siger
-          </h2>
-          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Her er et par af de kirker og netværk, jeg har haft fornøjelsen af at hjælpe.
-          </p>
-        </div>
+	return (
+		<section className="py-20 px-6 relative overflow-hidden bg-background">
+			<div className="absolute top-1/8 right-10 w-48 h-48 md:w-96 md:h-96 bg-[#D7EFF2]/60 rounded-blob-2 animate-float"></div>
 
-        {/* --- RETTELSE 1: DEN HVIDE BOKS ER FJERNET --- */}
-        {/* Logoerne "flyder" nu på baggrunden */}
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-3 md:grid-cols-5 gap-8 items-center opacity-70">
-            <LogoPlaceholder name="Mosaik" />
-            <LogoPlaceholder name="DanskOase" />
-            <LogoPlaceholder name="Apostolsk Kirke" />
-            <LogoPlaceholder name="[Kirkenavn Pladsholder]" />
-            <LogoPlaceholder name="[Netværk Pladsholder]" />
-          </div>
-        </div>
+			<div className="max-w-6xl mx-auto">
+				<div className="text-center mb-12 relative z-10">
+					<h2 className="text-4xl font-heading font-bold tracking-tight mb-2 text-foreground">
+						Det siger mine samarbejdspartnere
+					</h2>
+					<p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+						Her er nogle af de erfaringer samarbejdspartnere har delt efter
+						samarbejde.
+					</p>
+				</div>
 
-        {/* --- RETTELSE 2: IKONET ER UDSKIFTET MED ET STYLET <span> --- */}
-        <div className="max-w-3xl mx-auto text-center relative mt-16">
-          
-          {/* Dette span erstatter <Quote>-ikonet. Det er stabilt. */}
-          <span className="absolute -top-12 left-1/2 -translate-x-1/2 text-9xl font-heading text-[#117ABB]/10 -z-10" aria-hidden="true">
-            ”
-          </span>
-          
-          {/* Anførselstegnene er fjernet fra selve teksten herunder */}
-          <blockquote className="text-2xl font-medium text-foreground relative z-10">
-            Mine frivillige fortalte efter vores sommerlejr, at de i høj grad trak på de erfaringer, de tog med fra undervisningen. Dorte skabte rum for, at de frivillige både kunne forstå børnene og rammerne, men i lige så høj grad fik lov til at vokse i egne kompetencer.
-          </blockquote>
-          
-          <p className="text-lg font-medium text-primary mt-6">
-            — Mie Nygaard Fris
-          </p>
-          <p className="text-muted-foreground">
-            Børneambassadør
-          </p>
-        </div>
-        
-      </div>
-    </section>
-  );
+				<div className="max-w-5xl mx-auto relative z-10">
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+						<TestimonialCard
+							quote="Selv med erfaring og viden på området var det givende at få nye perspektiver på både udfordringer og muligheder. Dortes levende formidling gjorde det nemt at spejle historierne i vores virkelighed, så pointerne kunne omsættes til konkrete tiltag."
+							author="Mie Nygaard Fris"
+							role="Børneambassadør/BUO"
+						/>
+						<TestimonialCard
+							quote="Et praksisnært og inspirerende kursus med genkendelige eksempler og konkrete handleforslag. De frivillige fik nye perspektiver på neurodivergente børn og gik derfra med både indsigt og konkrete idéer til deres arbejde."
+							author="Majbrit Strange"
+							role="Leder for Børn & Junior i AKBU"
+						/>
+					</div>
+				</div>
+
+				<div className="max-w-4xl mx-auto pt-16 relative z-10">
+					<div className="text-center mb-6">
+						<p className="text-sm font-semibold text-accent uppercase tracking-wider">
+							Betroet af
+						</p>
+					</div>
+					<div className="flex flex-col md:flex-row items-center justify-center gap-8">
+						<OrganizationLogo src={mosaikSrc} alt="Mosaik" />
+						<OrganizationLogo src={danskoaseSrc} alt="DanskOase" />
+						<OrganizationLogo src={apostolskSrc} alt="Apostolsk Kirke" />
+					</div>
+				</div>
+			</div>
+		</section>
+	);
 }
