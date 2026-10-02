@@ -1,15 +1,15 @@
 # DorteLinde.dk 🚀
 ### Professional Landing Page for an Inclusion Specialist
 
-![Status](https://img.shields.io/badge/Status-Dev_Complete_|_Awaiting_Launch-yellow) ![Stack](https://img.shields.io/badge/Stack-React_|_TypeScript_|_Tailwind-blue) ![DevOps](https://img.shields.io/badge/DevOps-Docker_Review_Pipeline-2496ED)
+![Status](https://img.shields.io/badge/Status-Live-brightgreen) ![Stack](https://img.shields.io/badge/Stack-React_|_TypeScript_|_Tailwind-blue) ![DevOps](https://img.shields.io/badge/DevOps-Docker_Review_Pipeline-2496ED)
 
-**DorteLinde.dk** is a responsive, single-page landing page built for a consultant specializing in the inclusion of children with special needs.
+**DorteLinde.dk** is a responsive, single-page landing page built for a consultant specializing in the inclusion of children with special needs. It is **live at [dortelinde.dk](https://dortelinde.dk)**.
 
 This project represents the full lifecycle of a web product: from interpreting a **Figma design**, through **React/TypeScript implementation**, to a custom **Docker-based review workflow**.
 
 > **Client:** Dorte Linde (Consultant)
 > **Role:** Full Stack Development & DevOps
-> **Current Status:** Development complete. Staged and ready for production launch (pending client schedule).
+> **Status:** Launched — live at [dortelinde.dk](https://dortelinde.dk)
 
 ---
 
@@ -63,7 +63,7 @@ I containerized the Vite development environment to create a portable review pip
 * **UI Library:** shadcn/ui
 * **Forms:** Formspree (Serverless form handling)
 * **DevOps:** Docker (Review Pipeline)
-* **Hosting:** Apache/cPanel (Nordicway) - *Configuration Ready*
+* **Hosting:** Apache/cPanel (Nordicway) — deployed and live at [dortelinde.dk](https://dortelinde.dk)
 
 ---
 
@@ -82,7 +82,7 @@ During development, I encountered and resolved several specific technical hurdle
 
 1.  **Clone the repository**
     ```bash
-    git clone [https://github.com/marcuslinde/dortelinde.git](https://github.com/marcuslinde/dortelinde.git)
+    git clone https://github.com/marcuslinde/Landing_page.git
     ```
 2.  **Install Dependencies**
     ```bash
