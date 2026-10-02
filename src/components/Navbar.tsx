@@ -19,7 +19,7 @@ export function Navbar() {
     } else {
       const element = document.getElementById(id);
       if (element) {
-        const offset = 70; 
+        const offset = 104; 
         const elementPosition = element.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - offset;
         window.scrollTo({ top: offsetPosition, behavior: "smooth" });
@@ -28,7 +28,7 @@ export function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b-2 border-primary/20">
+    <nav className="fixed top-9 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b-2 border-primary/20">
       <div className="absolute top-0 right-1/4 w-32 h-full bg-[#D8B36C]/30 rounded-blob -z-10 blur-2xl"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6">

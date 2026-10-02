@@ -7,6 +7,7 @@ import {
 } from "./ui/card";
 import { Button } from "./ui/button";
 import { Check } from "lucide-react";
+import { BOOKED_UNTIL_YEAR } from "../siteConfig";
 
 // --- OPDATERET DATA BASERET PÅ OPRINDELIG TEKST ---
 
@@ -81,6 +82,9 @@ export function Pricing() {
 					<p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
 						Her er de tre pakker, jeg tilbyder. Alle ydelser tilpasses
 						selvfølgelig til jeres målgruppe og unikke behov.
+					</p>
+					<p className="text-muted-foreground mt-2 text-sm font-medium">
+						Nye forløb bookes fra {BOOKED_UNTIL_YEAR}.
 					</p>
 				</div>
 

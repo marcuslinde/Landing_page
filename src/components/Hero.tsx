@@ -1,5 +1,7 @@
+import { CalendarClock } from "lucide-react";
 import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { BOOKED_UNTIL_YEAR } from "../siteConfig";
 
 const imageSrc = "/images/tale.webp";
 const imageSrcMobile = "/images/tale-mobile.webp";
@@ -28,6 +30,17 @@ export function Hero() {
         {/* Left side - Content (centered) */}
         <div className="relative z-10 px-6 py-20 lg:py-32 flex items-center justify-center">
           <div className="max-w-xl space-y-8 text-center lg:text-left">
+            {/* Availability badge */}
+            <div className="flex justify-center lg:justify-start">
+              <span
+                className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-medium"
+                style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)', color: 'var(--hero-text)' }}
+              >
+                <CalendarClock className="w-4 h-4" />
+                Fuldt booket indtil {BOOKED_UNTIL_YEAR}
+              </span>
+            </div>
+
             {/* Main heading */}
             <div className="space-y-4">
               <h1 className="text-6xl md:text-7xl lg:text-8xl lg:text-foreground font-heading font-medium" style={{ color: 'var(--hero-text)', letterSpacing: '-0.05em' }}>
@@ -35,6 +48,9 @@ export function Hero() {
               </h1>
               <p className="text-xl md:text-2xl lg:text-muted-foreground font-heading font-medium" style={{ color: 'var(--hero-text)' }}>
                 Hjælper kirker, foreninger og skoler med at skabe en kultur, hvor børn med særlige behov kan blomstre.
+              </p>
+              <p className="text-base md:text-lg" style={{ color: 'rgba(255, 255, 255, 0.85)' }}>
+                Jeg er fuldt booket indtil {BOOKED_UNTIL_YEAR} og kan først tage nye opgaver herefter. Men du er meget velkommen til at booke mig i {BOOKED_UNTIL_YEAR}.
               </p>
             </div>
             

@@ -11,6 +11,7 @@ import {
 	SelectValue,
 } from "./ui/select";
 import { toast } from "sonner";
+import { BOOKED_UNTIL_YEAR, EARLIEST_DATE } from "../siteConfig";
 
 export function QuoteRequestForm() {
 	const [formData, setFormData] = useState({
@@ -21,12 +22,20 @@ export function QuoteRequestForm() {
 		eventDate: "",
 		attendees: "",
 		message: "",
+		acknowledged: false,
 	});
 
 	const [isSubmitting, setIsSubmitting] = useState(false);
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
+
+		if (formData.eventDate && formData.eventDate < EARLIEST_DATE) {
+			toast.error(
+				`Dorte er fuldt booket indtil ${BOOKED_UNTIL_YEAR}. Vælg venligst en dato i ${BOOKED_UNTIL_YEAR} eller senere.`,
+			);
+			return;
+		}
 
 		setIsSubmitting(true);
 
@@ -53,6 +62,7 @@ export function QuoteRequestForm() {
 					eventDate: "",
 					attendees: "",
 					message: "",
+					acknowledged: false,
 				});
 			} else {
 				toast.error("Hov, der skete en fejl. Prøv venligst igen.");
@@ -67,7 +77,7 @@ export function QuoteRequestForm() {
 	return (
 		<section
 			id="quote-form"
-			className="py-20 px-6 bg-secondary relative overflow-hidden"
+			className="py-20 px-6 bg-secondary relative overflow-hidden scroll-mt-[104px]"
 		>
 			{/* Playful background blob - RETTET */}
 			<div className="absolute top-10 -left-20 w-[250px] h-[250px] md:w-[400px] md:h-[400px] bg-[#117ABB]/15 rounded-blob-2 animate-morph opacity-60"></div>
@@ -82,6 +92,10 @@ export function QuoteRequestForm() {
 					<p className="text-muted-foreground mt-4">
 						Udfyld formularen, så vender jeg tilbage hurtigst muligt for at
 						drøfte jeres behov.
+					</p>
+					<p className="text-muted-foreground mt-2">
+						Du er stadig velkommen til at sende en forespørgsel for{" "}
+						{BOOKED_UNTIL_YEAR}.
 					</p>
 				</div>
 
@@ -181,6 +195,7 @@ export function QuoteRequestForm() {
 							<Input
 								id="eventDate"
 								type="date"
+								min={EARLIEST_DATE}
 								value={formData.eventDate}
 								onChange={(e) =>
 									setFormData((prev) => ({
@@ -189,6 +204,9 @@ export function QuoteRequestForm() {
 									}))
 								}
 							/>
+							<p className="text-xs text-muted-foreground">
+								Tidligste dato: 1. januar {BOOKED_UNTIL_YEAR}
+							</p>
 						</div>
 					</div>
 
@@ -222,6 +240,30 @@ export function QuoteRequestForm() {
 							placeholder="Fortæl mig lidt om jeres fællesskab, jeres udfordringer, og hvad I håber at få ud af et oplæg eller forløb."
 							rows={5}
 						/>
+					</div>
+
+					<div className="flex items-start gap-3">
+						<input
+							id="acknowledged"
+							type="checkbox"
+							required
+							checked={formData.acknowledged}
+							onChange={(e) =>
+								setFormData((prev) => ({
+									...prev,
+									acknowledged: e.target.checked,
+								}))
+							}
+							className="mt-1 h-4 w-4 flex-shrink-0 accent-primary cursor-pointer"
+						/>
+						<Label
+							htmlFor="acknowledged"
+							className="text-sm font-normal leading-relaxed cursor-pointer"
+						>
+							Jeg er opmærksom på, at Dorte er fuldt booket indtil{" "}
+							{BOOKED_UNTIL_YEAR}, og at min henvendelse først kan imødekommes
+							fra {BOOKED_UNTIL_YEAR}.
+						</Label>
 					</div>
 
 					<div className="pt-4">
