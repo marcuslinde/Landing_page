@@ -9,20 +9,11 @@ export function Footer({ onPrivacyClick }: FooterProps) {
 		<footer className="bg-primary text-primary-foreground py-12 px-6">
 			<div className="max-w-6xl mx-auto">
 				<div className="flex flex-col md:flex-row justify-between md:justify-center gap-8 md:gap-12">
-					{/* Kolonne 1: Brand (auto-bredde)
-          <div className="md:w-1/3">
-            <h3 className="text-2xl font-heading font-bold tracking-tight mb-2">Dorte Linde</h3>
-            <p className="mt-4 opacity-80">
-              Specialist i inklusion & Forfatter
-            </p>
-          </div> */}
-
-					{/* Kolonne 2: Kontakt (centreret) */}
-					{/* Beholder md:w-1/3 for at sikre tekst ikke flyder for bredt ud, selvom den står alene */}
+					{/* Kontakt */}
 					<div className="md:w-1/3 md:text-center">
-						<h4 className="text-lg text-center font-heading font-semibold tracking-tight mb-2">
+						<h2 className="text-lg text-center font-heading font-semibold tracking-tight mb-2">
 							Kontakt
-						</h4>
+						</h2>
 						<div className="mt-4 space-y-3 opacity-80 flex flex-col items-center">
 							<a
 								href="mailto:dortelinde@gmail.com"
@@ -40,31 +31,6 @@ export function Footer({ onPrivacyClick }: FooterProps) {
 							</a>
 						</div>
 					</div>
-
-					{/* Kolonne 3: Forbind (højrestillet)
-          <div className="md:w-1/3 md:text-right">
-            <h4 className="text-lg font-heading font-semibold tracking-tight mb-2">Forbind</h4>
-            <div className="mt-4 space-y-3 opacity-80 flex flex-col items-start md:items-end">
-              <a 
-                href="#" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="flex items-center gap-3 hover:opacity-80 transition-opacity"
-              >
-                <span>Dorte Linde</span>
-                <Facebook className="w-5 h-5 flex-shrink-0" />
-              </a>
-              <a 
-                href="https://www.instagram.com/lowfodmapdanish" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="flex items-center gap-3 hover:opacity-80 transition-opacity"
-              >
-                <span>lowfodmapdanish</span>
-                <Instagram className="w-5 h-5 flex-shrink-0" />
-              </a>
-            </div>
-          </div> */}
 				</div>
 
 				<div className="mt-12 pt-8 border-t border-primary-foreground/20 text-center opacity-80">

@@ -69,9 +69,9 @@ export function PresentationTopics() {
 								<p className="text-muted-foreground mb-6">{description}</p>
 
 								<div className="pt-4 mt-auto border-t border-muted">
-									<h4 className="font-semibold text-sm text-foreground mb-1">
+									<p className="font-semibold text-sm text-foreground mb-1">
 										Målgruppe:
-									</h4>
+									</p>
 
 									<p className="text-muted-foreground text-sm">
 										{targetAudience}

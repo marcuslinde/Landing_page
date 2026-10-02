@@ -17,7 +17,7 @@ export function Hero() {
       <div className="absolute inset-0 lg:hidden">
         <ImageWithFallback
           src={imageSrcMobile}
-          alt="Dorte Linde på scenen"
+          alt=""
           className="w-full h-full object-cover opacity-15 scale-150 origin-center"
           fetchPriority="high"
           decoding="async"

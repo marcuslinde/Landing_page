@@ -92,7 +92,8 @@ export function Navbar() {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden p-2 hover:bg-accent/50 rounded-blob transition-all hover:scale-110"
-            aria-label="Toggle menu"
+            aria-label={isMenuOpen ? "Luk menu" : "Åbn menu"}
+            aria-expanded={isMenuOpen}
           >
             {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>

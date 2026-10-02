@@ -28,13 +28,15 @@ export default function App() {
     <div className="min-h-screen">
       <AnnouncementBanner />
       <Navbar />
-      <Hero />
-      <About />
-      <PresentationTopics />
-      <Testimonials />
-      <Pricing />
-      <Book />
-      <QuoteRequestForm />
+      <main>
+        <Hero />
+        <About />
+        <PresentationTopics />
+        <Testimonials />
+        <Pricing />
+        <Book />
+        <QuoteRequestForm />
+      </main>
       <Footer onPrivacyClick={() => setShowPrivacy(true)} />
       <Toaster />
     </div>

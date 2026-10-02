@@ -8,7 +8,7 @@ interface PrivacyProps {
 export function Privacy({ onBack }: PrivacyProps) {
   return (
     <div className="min-h-screen bg-background">
-      <div className="max-w-4xl mx-auto px-6 py-12">
+      <main className="max-w-4xl mx-auto px-6 py-12">
         <Button onClick={onBack} variant="ghost" className="mb-8">
           <ArrowLeft className="w-4 h-4 mr-2" />
           Tilbage til forsiden
@@ -231,7 +231,7 @@ export function Privacy({ onBack }: PrivacyProps) {
             </Button>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 }
