@@ -15,7 +15,7 @@ There is **no test framework or test script**. Do not add or claim tests; verify
 - Entry: `index.html` → `src/main.tsx` → `src/App.tsx`.
 - Feature sections: `src/components/*.tsx` (About, Book, Footer, Hero, Navbar, PresentationTopics, Pricing, Privacy, QuoteRequestForm, Testimonials).
 - `Privacy` is shown via local state in `App.tsx`, not routing.
-- `src/components/ui/` is vendored shadcn/ui (many components unused). The `cn()` helper lives at `src/components/ui/utils.ts`, not `@/lib/utils`.
+- `src/components/ui/` is vendored shadcn/ui, trimmed to only the components the page uses (`button`, `card`, `input`, `label`, `select`, `sonner`, `textarea`, `utils`). The `cn()` helper lives at `src/components/ui/utils.ts`, not `@/lib/utils`. If you add a shadcn component, add its `@radix-ui/*` dependency too.
 - `@/` maps to `src/` (tsconfig `paths` + Vite alias), but existing code uses relative imports — match that.
 - Static assets: `public/images/…`, referenced as `/images/…` (see `public/README.md`).
 - `dist/` is generated, git-ignored, and not tracked; never edit by hand.
