@@ -26,7 +26,7 @@ Verify changes with **`npm run lint`, `npm run test`, and `npm run build`** — 
 - Tailwind theme colors are stored as bare HSL channels in `src/index.css` (e.g. `--primary: 188 78% 31%`) and referenced in `tailwind.config.ts` as `hsl(var(--primary) / <alpha-value>)`, so opacity modifiers like `bg-primary/15` work. Do **not** put `hsl()` around the variable or change the channels back to hex.
 - The `--hero-*` variables are the exception: they hold full color values and are used directly via `var(--hero-…)` (inline styles in `Hero.tsx`, and as colors in `tailwind.config.ts`).
 - Fonts (Inter, Rubik) are self-hosted via `@fontsource/*`, imported in `src/main.tsx`. There is no external Google Fonts request and **no dark mode** — the site is light-only (`next-themes` and the `.dark` palette were removed).
-- Two ESLint configs exist. `.eslintrc.cjs` is authoritative; `.eslintrc.json` is stale and ignored. Edit the `.cjs`.
+- ESLint config lives in `.eslintrc.cjs` (the only one; a stale `.eslintrc.json` was removed).
 - Docker (`dockerfile`) runs the Vite **dev** server on port `5523` (`docker run -p 5523:5523 marcuslinde/dortelinde-demo`), while local `npm run dev` uses `3000`.
 - User-facing copy is Danish; keep new text Danish.
 - The quote form posts to a hardcoded Formspree endpoint in `src/components/QuoteRequestForm.tsx`.
