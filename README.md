@@ -71,8 +71,8 @@ I containerized the Vite development environment to create a portable review pip
 
 During development, I encountered and resolved several specific technical hurdles:
 
-* **Tailwind Opacity Bug:** Discovered an issue where opacity modifiers (e.g., `bg-primary/15`) failed because the underlying CSS variables were defined as HEX codes.
-    * *Fix:* Utilized Tailwind arbitrary values (`bg-[#117A8B]/15`) as a pragmatic solution to maintain velocity without rewriting the global theme configuration.
+* **Tailwind Opacity Modifiers:** Opacity utilities (e.g. `bg-primary/15`) silently generated no CSS, because the theme colors were defined as raw HEX values that Tailwind cannot inject an alpha channel into.
+    * *Fix:* Re-architected the theme so colors are stored as bare HSL channels (`--primary: 188 78% 31%`) and referenced as `hsl(var(--primary) / <alpha-value>)`, which makes every opacity modifier work consistently across the design system.
 * **TypeScript Build Pipeline:** Debugged strict type errors regarding unused variables and missing component definitions in the `shadcn` library to ensure a clean `npm run build` process.
 * **Asset Management:** Replaced hardcoded design URLs with a structured local `public` asset directory for better caching and reliability.
 
