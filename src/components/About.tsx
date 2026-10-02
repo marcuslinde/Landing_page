@@ -1,6 +1,6 @@
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
-const imageSrc = "/images/bogsalg.jpeg";
+const imageSrc = "/images/bogsalg.webp";
 
 export function About() {
 	return (
@@ -19,6 +19,8 @@ export function About() {
 							src={imageSrc}
 							alt="Dorte Linde portræt"
 							className="w-full h-[500px] object-cover rounded-blob"
+							loading="lazy"
+							decoding="async"
 						/>
 					</div>
 

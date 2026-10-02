@@ -1,8 +1,8 @@
 import { Quote } from "lucide-react";
 
-const mosaikSrc = "/images/logos/mosaik-logo.png";
-const danskoaseSrc = "/images/logos/DanskOase.png";
-const apostolskSrc = "/images/logos/apostolsk.png";
+const mosaikSrc = "/images/logos/mosaik-logo.webp";
+const danskoaseSrc = "/images/logos/DanskOase.webp";
+const apostolskSrc = "/images/logos/apostolsk.webp";
 
 const OrganizationLogo = ({ src, alt }: { src: string; alt: string }) => (
 	<div className="flex items-center justify-center w-32 h-12 px-6">
@@ -10,6 +10,8 @@ const OrganizationLogo = ({ src, alt }: { src: string; alt: string }) => (
 			src={src}
 			alt={alt}
 			className="h-full w-auto max-w-[120px] object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+			loading="lazy"
+			decoding="async"
 		/>
 	</div>
 );

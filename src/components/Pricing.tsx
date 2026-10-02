@@ -142,7 +142,7 @@ export function Pricing() {
 					</p>
 
 					{/* Del 2: Den nye, synlige boks til variable ydelser */}
-					<div className="max-w-2xl mx-auto mt-10 pt-10 border-t border-muted">
+					<div className="max-w-2xl mx-auto mt-10">
 						<h3 className="text-lg font-semibold text-foreground">
 							Leder du efter noget andet?
 						</h3>

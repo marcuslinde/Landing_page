@@ -1,7 +1,8 @@
 import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
-const imageSrc = "/images/tale.jpeg";
+const imageSrc = "/images/tale.webp";
+const imageSrcMobile = "/images/tale-mobile.webp";
 
 export function Hero() {
   const scrollToForm = () => {
@@ -13,9 +14,11 @@ export function Hero() {
       {/* Mobile background image */}
       <div className="absolute inset-0 lg:hidden">
         <ImageWithFallback
-          src={imageSrc}
+          src={imageSrcMobile}
           alt="Dorte Linde på scenen"
           className="w-full h-full object-cover opacity-15 scale-150 origin-center"
+          fetchPriority="high"
+          decoding="async"
         />
       </div>
 
@@ -98,11 +101,16 @@ export function Hero() {
             className="relative w-[75%] h-[75%] overflow-hidden rounded-blob-2"
             style={{ maxWidth: '500px', maxHeight: '600px' }}
           >
-            <ImageWithFallback
-              src={imageSrc}
-              alt="Dorte Linde på scenen"
-              className="w-full h-full object-cover"
-            />
+            <picture>
+              <source media="(min-width: 1024px)" srcSet={imageSrc} />
+              <img
+                src={imageSrcMobile}
+                alt="Dorte Linde på scenen"
+                className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
           </div>
 
           {/* Decorative floating elements */}

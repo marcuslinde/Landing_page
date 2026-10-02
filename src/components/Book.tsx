@@ -2,7 +2,7 @@ import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { BookOpen, Newspaper } from "lucide-react";
 
-const imageSrc = "/images/bogsalg.jpeg";
+const imageSrc = "/images/bogsalg.webp";
 
 export function Book() {
 	return (
@@ -91,6 +91,8 @@ export function Book() {
 							src={imageSrc}
 							alt="Forside af bogen 'Børn med særlige behov – i kirkeligt børnearbejde'"
 							className="w-full max-w-md mx-auto aspect-square object-cover rounded-blob"
+							loading="lazy"
+							decoding="async"
 						/>
 					</div>
 				</div>
