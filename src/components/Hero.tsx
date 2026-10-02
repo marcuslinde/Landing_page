@@ -32,10 +32,7 @@ export function Hero() {
           <div className="max-w-xl space-y-8 text-center lg:text-left">
             {/* Availability badge */}
             <div className="flex justify-center lg:justify-start">
-              <span
-                className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-medium"
-                style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)', color: 'var(--hero-text)' }}
-              >
+              <span className="inline-flex items-center gap-2 rounded-full bg-ink px-4 py-1.5 text-sm font-medium text-accent ring-1 ring-accent/60">
                 <CalendarClock className="w-4 h-4" />
                 Fuldt booket indtil {BOOKED_UNTIL_YEAR}
               </span>

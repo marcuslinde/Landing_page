@@ -49,6 +49,8 @@
     --border: 36 10% 90%;
     --input: 36 10% 90%;
     --ring: 188 78% 31%;
+    /* Near-black used for high-contrast notices (announcement banner, hero chip) */
+    --ink: 0 0% 8%;
 
     --radius: 0.5rem;
   }
