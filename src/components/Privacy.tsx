@@ -11,7 +11,7 @@ export function Privacy({ onBack }: PrivacyProps) {
       <div className="max-w-4xl mx-auto px-6 py-12">
         <Button onClick={onBack} variant="ghost" className="mb-8">
           <ArrowLeft className="w-4 h-4 mr-2" />
-          Tilbage til Forsiden
+          Tilbage til forsiden
         </Button>
 
         <div className="space-y-8">
@@ -45,7 +45,7 @@ export function Privacy({ onBack }: PrivacyProps) {
 
             <section>
               <h2 className="text-3xl font-heading font-bold tracking-tight mb-2">
-                Hvilke Oplysninger Der Indsamles
+                Hvilke oplysninger der indsamles
               </h2>
               <p className="text-muted-foreground mt-2">
                 Når tilbudsanmodningsformularen bruges, indsamles følgende
@@ -68,7 +68,7 @@ export function Privacy({ onBack }: PrivacyProps) {
 
             <section>
               <h2 className="text-3xl font-heading font-bold tracking-tight mb-2">
-                Hvordan Oplysningerne Indsamles
+                Hvordan oplysningerne indsamles
               </h2>
               <p className="text-muted-foreground mt-2">
                 Oplysningerne indsamles direkte fra dig, når du:
@@ -84,7 +84,7 @@ export function Privacy({ onBack }: PrivacyProps) {
 
             <section>
               <h2 className="text-3xl font-heading font-bold tracking-tight mb-2">
-                Formål og Retsgrundlag
+                Formål og retsgrundlag
               </h2>
               <p className="text-muted-foreground mt-2">
                 Oplysningerne bruges til at:
@@ -132,7 +132,7 @@ export function Privacy({ onBack }: PrivacyProps) {
 
             <section>
               <h2 className="text-3xl font-heading font-bold tracking-tight mb-2">
-                Deling af Oplysninger
+                Deling af oplysninger
               </h2>
               <p className="text-muted-foreground mt-2">
                 Personoplysninger sælges, handles eller udlejes ikke.
@@ -153,7 +153,7 @@ export function Privacy({ onBack }: PrivacyProps) {
 
             <section>
               <h2 className="text-3xl font-heading font-bold tracking-tight mb-2">
-                Dine Rettigheder
+                Dine rettigheder
               </h2>
               <p className="text-muted-foreground mt-2">
                 Du har efter databeskyttelsesforordningen ret til at:
@@ -177,7 +177,7 @@ export function Privacy({ onBack }: PrivacyProps) {
 
             <section>
               <h2 className="text-3xl font-heading font-bold tracking-tight mb-2">
-                Cookies og Sporing
+                Cookies og sporing
               </h2>
               <p className="text-muted-foreground mt-2">
                 Denne hjemmeside bruger i øjeblikket ikke cookies eller
@@ -188,7 +188,7 @@ export function Privacy({ onBack }: PrivacyProps) {
 
             <section>
               <h2 className="text-3xl font-heading font-bold tracking-tight mb-2">
-                Børns Privatliv
+                Børns privatliv
               </h2>
               <p className="text-muted-foreground mt-2">
                 Tjenesterne er rettet mod voksne og organisationer. Der
@@ -200,7 +200,7 @@ export function Privacy({ onBack }: PrivacyProps) {
 
             <section>
               <h2 className="text-3xl font-heading font-bold tracking-tight mb-2">
-                Ændringer til Denne Politik
+                Ændringer til denne politik
               </h2>
               <p className="text-muted-foreground mt-2">
                 Denne privatlivspolitik kan opdateres fra tid til anden.
@@ -227,7 +227,7 @@ export function Privacy({ onBack }: PrivacyProps) {
           <div className="pt-8">
             <Button onClick={onBack}>
               <ArrowLeft className="w-4 h-4 mr-2" />
-              Tilbage til Forsiden
+              Tilbage til forsiden
             </Button>
           </div>
         </div>
