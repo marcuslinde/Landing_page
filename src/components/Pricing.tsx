@@ -13,7 +13,7 @@ import { BOOKED_UNTIL_YEAR } from "../siteConfig";
 
 const pricingTiers = [
 	{
-		name: "Oplæg & Foredrag",
+		name: "Oplæg & foredrag",
 		price: "3.000 kr",
 		description:
 			"Et praksisnært oplæg, der giver en grundlæggende indsigt i børn med særlige behov.",
@@ -27,7 +27,7 @@ const pricingTiers = [
 		popular: false,
 	},
 	{
-		name: "Hands-on Workshop",
+		name: "Hands-on workshop",
 		price: "4.500 kr",
 		description:
 			"Workshoppen kombinerer teori og praksis, hvor I selv får redskaberne i hænderne.",
@@ -42,12 +42,12 @@ const pricingTiers = [
 		popular: true,
 	},
 	{
-		name: "Træningsdag & Implementering",
+		name: "Træningsdag & implementering",
 		price: "8.500 kr",
 		description:
 			"Til jer, der har en specifik udfordring eller brug for langsigtet hjælp til en inkluderende kultur.",
 		features: [
-			"Alt fra 'Hands-on Workshop'-pakken",
+			"Alt fra 'Hands-on workshop'-pakken",
 			"Udvidet 3,5-timers session (hel formiddag/aften)",
 			"1:1 sparring med udvalgte ledere og nøglepersoner",
 			"Foreslag til implementeringsstrategier",
@@ -75,7 +75,7 @@ export function Pricing() {
 			<div className="max-w-7xl mx-auto relative">
 				<div className="text-center mb-16">
 					<h2 className="text-4xl font-heading font-bold tracking-tight mb-2">
-						Find jeres Format
+						Find jeres format
 					</h2>
 
 					{/* --- INTRO-TEKST FRA OPRINDELIG TEKST --- */}
@@ -98,7 +98,7 @@ export function Pricing() {
 						>
 							{tier.popular && (
 								<div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full">
-									Mest Populær
+									Mest populær
 								</div>
 							)}
 
@@ -131,7 +131,7 @@ export function Pricing() {
 								>
 									{tier.price === "Pris efter aftale"
 										? "Kontakt for tilbud"
-										: "Anmod om Tilbud"}
+										: "Anmod om tilbud"}
 								</Button>
 							</CardContent>
 						</Card>

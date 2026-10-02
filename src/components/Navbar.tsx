@@ -6,7 +6,7 @@ export function Navbar() {
 
   const navItems = [
     { label: "Hjem", id: "hero" },
-    { label: "Om Mig", id: "about" },
+    { label: "Om mig", id: "about" },
     { label: "Emner", id: "topics" },
     { label: "Priser", id: "pricing" },
     { label: "Bog", id: "book" },
@@ -82,7 +82,7 @@ export function Navbar() {
             >
               <span className="relative z-10 flex items-center gap-1.5">
                 <Sparkles className="w-3.5 h-3.5" />
-                Anmod om Tilbud
+                Anmod om tilbud
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent transform -translate-x-[100%] group-hover:translate-x-[100%] transition-transform duration-500 ease-in-out skew-x-[-20deg]"></div>
             </button>
@@ -129,7 +129,7 @@ export function Navbar() {
               >
                 <span className="relative z-10 flex items-center gap-1.5">
                   <Sparkles className="w-4 h-4" />
-                  Anmod om Tilbud
+                  Anmod om tilbud
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent transform -translate-x-[100%] group-hover:translate-x-[100%] transition-transform duration-500 ease-in-out skew-x-[-20deg]"></div>
               </button>

@@ -85,7 +85,7 @@ export function QuoteRequestForm() {
 			<div className="max-w-3xl mx-auto relative">
 				<div className="text-center mb-12">
 					<h2 className="text-4xl font-heading font-bold tracking-tight mb-2">
-						Anmod om Tilbud
+						Anmod om tilbud
 					</h2>
 
 					{/* RETTET: Varmere subheader */}
@@ -167,18 +167,18 @@ export function QuoteRequestForm() {
 
 								<SelectContent>
 									<SelectItem value="oplæg">
-										Oplæg & Foredrag (fra 3.000 kr)
+										Oplæg & foredrag (fra 3.000 kr)
 									</SelectItem>
 
 									<SelectItem value="workshop">
-										Hands-on Workshop (fra 4.500 kr)
+										Hands-on workshop (fra 4.500 kr)
 									</SelectItem>
 
 									<SelectItem value="træningsdag">
-										Træningsdag & Implementering (fra 8.500 kr)
+										Træningsdag & implementering (fra 8.500 kr)
 									</SelectItem>
 
-									<SelectItem value="sparring">1:1 Sparring</SelectItem>
+									<SelectItem value="sparring">1:1 sparring</SelectItem>
 
 									<SelectItem value="netværk">
 										Længerevarende partnerskab for kirkenetværk

@@ -5,7 +5,7 @@ const topics = [
 	// ... (din data er uændret)
 	{
 		Icon: Heart,
-		title: "Neurodiversitet i Fællesskabet",
+		title: "Neurodiversitet i fællesskabet",
 		description:
 			"En grundlæggende indføring i autisme, ADHD og angst. Vi ser på, hvordan Gud værdsætter hvert barn, og hvorfor neurodiversitet beriger vores fællesskab.",
 		targetAudience:
@@ -13,7 +13,7 @@ const topics = [
 	},
 	{
 		Icon: Users,
-		title: "Praktiske Inklusionsstrategier",
+		title: "Praktiske inklusionsstrategier",
 		description:
 			"Konkrete 'hands-on' redskaber til at skabe imødekommende og tilgængelige miljøer for alle børn – fra visuelle hjælpemidler til at håndtere en 'nedsmeltning' med ro.",
 		targetAudience:
@@ -21,7 +21,7 @@ const topics = [
 	},
 	{
 		Icon: Church,
-		title: "Opbygning af en Inkluderende Kultur",
+		title: "Opbygning af en inkluderende kultur",
 		description:
 			"For ledere og teams. Vi ser på, hvordan man skaber systemiske ændringer, byder familier med særlige behov velkommen og bygger en sund kultur fra bunden.",
 		targetAudience:

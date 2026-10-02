@@ -18,7 +18,7 @@ export function Book() {
 				<div className="grid md:grid-cols-2 gap-12 items-center">
 					<div className="order-2 md:order-1 space-y-6">
 						<div className="inline-flex items-center gap-2 px-4 py-2 border border-primary rounded-blob transition-all duration-300 hover:scale-110">
-							<span className="text-primary">Min Bog</span>
+							<span className="text-primary">Min bog</span>
 						</div>
 
 						<h2 className="text-4xl font-heading font-bold tracking-tight mb-2">
@@ -69,7 +69,7 @@ export function Book() {
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									Køb Bogen
+									Køb bogen
 								</a>
 							</Button>
 
@@ -81,7 +81,7 @@ export function Book() {
 									formElement?.scrollIntoView({ behavior: "smooth" });
 								}}
 							>
-								Book et Oplæg
+								Book et oplæg
 							</Button>
 						</div>
 					</div>
