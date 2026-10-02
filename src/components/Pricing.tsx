@@ -68,7 +68,7 @@ export function Pricing() {
 			id="pricing"
 			className="py-20 px-6 bg-secondary overflow-hidden relative"
 		>
-			<div className="absolute top-15 -left-32 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-[#117ABB]/15 rounded-blob-2 animate-wobble opacity-60"></div>
+			<div className="absolute top-16 -left-32 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-[#117ABB]/15 rounded-blob-2 animate-morph opacity-60"></div>
 			<div className="absolute bottom-20 right-5 w-[250px] h-[250px] md:w-[400px] md:h-[400px] bg-[#117ABB]/15 rounded-blob animate-float opacity-70"></div>
 
 			<div className="max-w-7xl mx-auto relative">

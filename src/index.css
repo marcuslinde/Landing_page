@@ -15,46 +15,48 @@
 
 @layer base {
   :root {
-    --background: #F9F9F9;
-    --foreground: #333333;
+    /* Theme colours are stored as bare HSL channels so Tailwind can apply
+       opacity modifiers (e.g. bg-primary/15). Do not wrap them in hsl(). */
+    --background: 0 0% 98%;
+    --foreground: 0 0% 20%;
 
-    --card: #ffffff;
-    --card-foreground: #333333;
- 
-    --popover: #F9F9F9;
-    --popover-foreground: #333333;
- 
-    --primary: #117A8B;
-    --primary-foreground: #F9F9F9;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 20%;
 
-    /* Hero section specific colors */
+    --popover: 0 0% 98%;
+    --popover-foreground: 0 0% 20%;
+
+    --primary: 188 78% 31%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Hero section specific colours (full colour values, used via var()) */
     --hero-bg: #117A8B;
     --hero-text: #FFFFFF;
     --hero-trust-bg-mobile: rgb(255 255 255 / 0.2);
     --hero-trust-bg-desktop: rgb(17 122 139 / 0.1);
     --hero-blob-bg: rgba(255, 255, 255, 0.2);
- 
-    --secondary: #D7EFF2;
-    --secondary-foreground: #333333;
- 
-    --muted: #E8E6E3;
-    --muted-foreground: #666666;
- 
-    --accent: #D8B36C;
-    --accent-foreground: #333333;
- 
-    --destructive: #E11D48;
-    --destructive-foreground: #F9F9F9;
 
-    --border: #E8E6E3;
-    --input: #E8E6E3;
-    --ring: #117A8B;
- 
+    --secondary: 187 51% 90%;
+    --secondary-foreground: 0 0% 20%;
+
+    --muted: 36 10% 90%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 39 58% 64%;
+    --accent-foreground: 0 0% 20%;
+
+    --destructive: 347 77% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 36 10% 90%;
+    --input: 36 10% 90%;
+    --ring: 188 78% 31%;
+
     --radius: 0.5rem;
   }
- 
+
   .dark {
-    /* NEW PALETTE - DARK MODE 
+    /* NEW PALETTE - DARK MODE
       Mapping:
       - Background: Charcoal (#333333)
       - Foreground/Text: Off-white (#F9F9F9)
@@ -65,39 +67,39 @@
       - Accent: Soft Gold (#D8B36C) pops beautifully on a dark background
       - Ring: Teal Deep (#117A8B) for focus states
     */
-    --background: #333333;
-    --foreground: #F9F9F9;
- 
-    --card: #333333;
-    --card-foreground: #F9F9F9;
- 
-    --popover: #333333;
-    --popover-foreground: #F9F9F9;
- 
-    --primary: #117A8B;
-    --primary-foreground: #F9F9F9;
+    --background: 0 0% 20%;
+    --foreground: 0 0% 98%;
 
-    /* Hero section specific colors */
+    --card: 0 0% 20%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 20%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 188 78% 31%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Hero section specific colours (full colour values, used via var()) */
     --hero-bg: #117A8B;
     --hero-text: #FFFFFF;
     --hero-trust-bg-mobile: rgb(255 255 255 / 0.2);
     --hero-trust-bg-desktop: rgb(17 122 139 / 0.1);
     --hero-blob-bg: rgb(17 122 139 / 0.1);
- 
-    --secondary: #0E6676;
-    --secondary-foreground: #F9F9F9;
- 
-    --muted: #454545;
-    --muted-foreground: #A6A6A6;
- 
-    --accent: #D8B36C;
-    --accent-foreground: #333333;
- 
-    --destructive: #BE123C;
-    --destructive-foreground: #F9F9F9;
- 
-    --border: #454545;
-    --input: #454545;
-    --ring: #117A8B;
+
+    --secondary: 189 79% 26%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 27%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 39 58% 64%;
+    --accent-foreground: 0 0% 20%;
+
+    --destructive: 345 83% 41%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 27%;
+    --input: 0 0% 27%;
+    --ring: 188 78% 31%;
   }
 }

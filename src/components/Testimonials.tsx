@@ -38,7 +38,7 @@ const TestimonialCard = ({
 export function Testimonials() {
 	return (
 		<section className="py-20 px-6 relative overflow-hidden bg-background">
-			<div className="absolute top-1/8 right-10 w-48 h-48 md:w-96 md:h-96 bg-[#D7EFF2]/60 rounded-blob-2 animate-float"></div>
+			<div className="absolute top-[12.5%] right-10 w-48 h-48 md:w-96 md:h-96 bg-[#D7EFF2]/60 rounded-blob-2 animate-float"></div>
 
 			<div className="max-w-6xl mx-auto">
 				<div className="text-center mb-12 relative z-10">

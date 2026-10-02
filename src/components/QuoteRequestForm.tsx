@@ -70,7 +70,7 @@ export function QuoteRequestForm() {
 			className="py-20 px-6 bg-secondary relative overflow-hidden"
 		>
 			{/* Playful background blob - RETTET */}
-			<div className="absolute top-10 -left-20 w-[250px] h-[250px] md:w-[400px] md:h-[400px] bg-[#117ABB]/15 rounded-blob-2 animate-wobble opacity-60"></div>
+			<div className="absolute top-10 -left-20 w-[250px] h-[250px] md:w-[400px] md:h-[400px] bg-[#117ABB]/15 rounded-blob-2 animate-morph opacity-60"></div>
 			<div className="absolute -bottom-40 -right-32 w-[250px] h-[250px] md:w-[400px] md:h-[400px] bg-[#117ABB]/15 rounded-blob animate-float opacity-70"></div>
 			<div className="max-w-3xl mx-auto relative">
 				<div className="text-center mb-12">

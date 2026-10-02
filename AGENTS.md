@@ -21,9 +21,9 @@ There is **no test framework or test script**. Do not add or claim tests; verify
 - `dist/` is generated, git-ignored, and not tracked; never edit by hand.
 
 ## Gotchas
-- Tailwind theme colors are CSS variables in `src/index.css` defined as hex. Opacity modifiers like `bg-primary/15` silently fail; use arbitrary values such as `bg-[#117A8B]/15` (the existing pattern).
+- Tailwind theme colors are stored as bare HSL channels in `src/index.css` (e.g. `--primary: 188 78% 31%`) and referenced in `tailwind.config.ts` as `hsl(var(--primary) / <alpha-value>)`, so opacity modifiers like `bg-primary/15` work. Do **not** put `hsl()` around the variable or change the channels back to hex.
+- The `--hero-*` variables are the exception: they hold full color values and are used directly via `var(--hero-…)` (inline styles in `Hero.tsx`, and as colors in `tailwind.config.ts`).
 - Two ESLint configs exist. `.eslintrc.cjs` is authoritative; `.eslintrc.json` is stale and ignored. Edit the `.cjs`.
 - Docker (`dockerfile`) runs the Vite **dev** server on port `5523` (`docker run -p 5523:5523 marcuslinde/dortelinde-demo`), while local `npm run dev` uses `3000`.
 - User-facing copy is Danish; keep new text Danish.
 - The quote form posts to a hardcoded Formspree endpoint in `src/components/QuoteRequestForm.tsx`.
-- `animate-wobble`, `tilt-1`, and `tilt-2` are referenced in components but defined nowhere; they are no-ops.

@@ -36,7 +36,7 @@ export function PresentationTopics() {
 			className="py-20 px-6 bg-secondary relative overflow-hidden"
 		>
 			{/* Playful background blob */}
-			<div className="absolute top-1/8 -left-20 w-64 h-64 md:w-96 md:h-96 bg-[#117ABB]/15 rounded-blob animate-float"></div>
+			<div className="absolute top-[12.5%] -left-20 w-64 h-64 md:w-96 md:h-96 bg-[#117ABB]/15 rounded-blob animate-float"></div>
 
 			<div className="max-w-6xl mx-auto relative">
 				<div className="text-center mb-12">

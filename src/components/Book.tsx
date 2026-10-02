@@ -86,7 +86,7 @@ export function Book() {
 						</div>
 					</div>
 
-					<div className="order-1 md:order-2 tilt-1 hover:scale-105 transition-transform duration-500">
+					<div className="order-1 md:order-2 hover:scale-105 transition-transform duration-500">
 						<ImageWithFallback
 							src={imageSrc}
 							alt="Forside af bogen 'Børn med særlige behov – i kirkeligt børnearbejde'"

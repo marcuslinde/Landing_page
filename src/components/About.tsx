@@ -14,7 +14,7 @@ export function About() {
 
 			<div className="max-w-6xl mx-auto relative">
 				<div className="grid md:grid-cols-2 gap-12 items-center">
-					<div className="hidden md:block tilt-2 hover:scale-105 transition-transform duration-500">
+					<div className="hidden md:block hover:scale-105 transition-transform duration-500">
 						<ImageWithFallback
 							src={imageSrc}
 							alt="Dorte Linde portræt"

@@ -38,7 +38,7 @@ export function Navbar() {
             className="group flex items-center gap-2 hover:scale-105 transition-transform"
           >
             <span className="relative">
-              <span className="block tilt-1 transition-transform group-hover:rotate-0" style={{ 
+              <span className="block" style={{ 
                 fontFamily: 'Rubik, sans-serif',
                 fontSize: '1.25rem',
                 letterSpacing: '-0.01em',
